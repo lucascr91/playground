@@ -4,8 +4,9 @@ import requests
 import time
 import pickle as pkl
 from datetime import datetime
-import smtplib
-from email.mime.text import MIMEText
+from tkinter import *
+from tkinter import messagebox
+import collections 
 #load last list of questions
 with open('questions.pkl', 'rb') as f:
     last_questions = pkl.load(f)
@@ -22,27 +23,26 @@ while True:
         current_questions.append(html[i].split(">")[1].split("/")[3].split("\"")[0].replace("%c3%a3","ã").replace("%c3%a7","ç")\
             .replace("%c3%a9","é").replace("%c3%b3","ó").replace("%c3%a1", "á"))
 
-    last_questions.sort()
-    current_questions.sort()
+    # last_questions.sort()
+    # current_questions.sort()
 
-    if last_questions==current_questions:
+    if collections.Counter(last_questions) == collections.Counter(current_questions):
         print("No change", "\n\n")
     else:
-        print("Saving new list and sending you an email")
-        print(datetime.now().strftime("%H:%M:%S"))
-        with open('message.txt', 'rb') as fp:
-            msg = MIMEText(fp.read())
-        me = "lucas.cpp010@gmail.com"
-        me_again = "lucas.cpp010@gmail.com"
-        msg['Subject'] = 'New question python SOpt' % textfile
-        msg['From'] = me
-        msg['To'] = me_again
-        # Send the message via our own SMTP server, but don't include the
-        # envelope header.
-        s = smtplib.SMTP('localhost')
-        s.sendmail(me, [me_again], msg.as_string())
-        s.quit()
+        print("One new question at", datetime.now().strftime("%H:%M:%S"))
+        print(current_questions[0])
+        root = tkinter.Tk()
+        root.geometry('+250+150')
+        root.title('New questions')
+        photo = tk.PhotoImage(file = "stack-overflow.png")
+        root.iconphoto(False, photo)
+        style = ThemedStyle(root)
+        style.set_theme("arc")
+        root.withdraw()
+
+        # Message Box
+        messagebox.showinfo("New Question SOpt", current_questions[0])
         with open('questions.pkl', 'wb') as f:
             pkl.dump(current_questions, f)
 
-    time.sleep(6000)
+    time.sleep(600)
