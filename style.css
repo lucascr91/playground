@@ -36,7 +36,7 @@ body {
     'input-text input-text enc-text enc-text'
     'input-text input-text enc-text enc-text'
     'input-text input-text enc-text enc-text'
-    'input-key enc-button enc-text enc-text';
+    'input-key enc-button copy-button copy-button';
     /* grid-template-columns: auto auto; */
     width: 900px;
     height: 600px;
@@ -83,6 +83,13 @@ body {
 
 }
 
+.item5 {
+    background-color: rgba(255, 255, 255, 0.8);
+    grid-area: copy-button;
+    padding: 20px 0;
+
+}
+
 .button {
     border: none;
     color: white;
@@ -96,6 +103,10 @@ body {
   }
 
 .button1 {
+    background-color: #4CAF50;
+} /* Green */
+
+.button2 {
     background-color: #4CAF50;
 } /* Green */
 
