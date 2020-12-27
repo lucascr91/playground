@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cifra de César</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -15,8 +16,7 @@
         </textarea>
         </div>
         <div class="item2"> 
-            <div class="result">
-            </div>
+            <textarea class="result" id="enc-text" readonly></textarea>
         </div>
         <div class="item3">    
             <label class="label key" for="fname">Chave:</label>
@@ -24,8 +24,12 @@
         <div class="item4"> 
             <button class="button button1" onclick="encrypt()">Criptografar</button> 
         </div>
+        <div class="item6"> 
+            <button class="button button3" onclick="decrypt()">Decifrar</button> 
+        </div>
+        
         <div class="item5"> 
-            <button class="button button2" >Copiar</button> 
+            <button class="button button2" onclick="copy()"><i class="fa fa-copy"></i></button>
         </div>
     </div>
     
