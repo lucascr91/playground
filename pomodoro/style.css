@@ -1,0 +1,40 @@
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'pomodoro short-break long-break'
+    'stopwatch stopwatch stopwatch'
+    'start-btn stop-btn reset-btn';
+    /* grid-template-columns: auto auto; */
+    width: 900px;
+    height: 600px;
+    padding: 50px 75px 75px 200px;
+}
+
+.item1 {
+    grid-area: pomodoro;
+}
+
+.item2 {
+    grid-area: short-break;
+}
+
+.item3 {
+    grid-area: long-break;
+}
+
+.item4 {
+    grid-area: stopwatch;
+    padding-left: 300px;
+}
+
+.item5 {
+    grid-area: start-btn;
+}
+
+.item6 {
+    grid-area: stop-btn;
+}
+
+.item7 {
+    grid-area: reset-btn;
+}
