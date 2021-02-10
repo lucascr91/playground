@@ -1,0 +1,15 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+copyTextToClipboard	caesar-cipher/script.js	/^function copyTextToClipboard(text) {$/;"	f	function:copy
+decrypt	caesar-cipher/script.js	/^function decrypt() {$/;"	f	function:function
+encrypt	caesar-cipher/script.js	/^function encrypt() {$/;"	f	function:function
+factorial	recursion/factorial.py	/^def factorial(n:int):$/;"	f
+int2base	recursion/int2baserec.py	/^def int2base(number):$/;"	f
+is_expoent	recursion/int2baserec.py	/^def is_expoent(number, order):$/;"	f
+sum_nestedlist	recursion/nestedlist_sum.py	/^def sum_nestedlist(L:list):$/;"	f
+to_string	recursion/int2baserec.py	/^def to_string(n,base):$/;"	f
+user_sum	recursion/sum_rec.py	/^def user_sum(L):$/;"	f
