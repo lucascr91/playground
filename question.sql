@@ -14,12 +14,14 @@ VALUES (1,"Bank Warburg",13051);
 INSERT INTO firms (id,name,capital)
 VALUES (2,"Atlas Security Information",42094);
 
-MERGE firms AS TARGET
-USING workers AS SOURCE 
-ON (TARGET.id = SOURCE.id) 
+create table firms_workers (
+    id INT, 
+    firm_name VARCHAR(100), 
+    capital INT, 
+    worker_name VARCHAR(100), 
+    sex VARCHAR(100), 
+    age VARCHAR(100));
 
--- SELECT * FROM workers;
--- SELECT * FROM workers WHERE id IN (SELECT id FROM firms);
-
-DROP TABLE firms;
-DROP TABLE workers;
+select *
+from workers w
+join firms f on f.id=w.id
